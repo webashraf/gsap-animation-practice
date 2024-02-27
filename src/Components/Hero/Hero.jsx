@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
 import "./Hero.css"
-gsap.registerPlugin(ScrollTrigger,TextPlugin);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 
 
@@ -14,7 +14,7 @@ const Hero = () => {
             color: "white",
             scrollTrigger: {
                 trigger: ".hero-parent",
-                markers: true,
+                // markers: true,
                 scrub: true,
                 start: "top 10%",
                 end: "bottom 90%"
@@ -31,21 +31,23 @@ const Hero = () => {
 
     }, []);
     return (
-        <div className="h-[150vh] relative hero-parent">
-            <div className='flex justify-center items-center h-[100vh] sticky top-10 gap-5'>
-                <div className="w-[20%]">
-                    <h4 className="text-white text-xl uppercase font-mono">01//04 - scroll ↓</h4>
-                </div>
-
-                <div className='w-[80%] text-transparent text-[144px] leading-[10rem] font-bold'>
-                    <h1 className="hero-heading">MULTI-</h1>
-                    <h1 className="hero-heading">DISCIPLINARY</h1>
-                    <div className='flex gap-5'>
-                        <h1 className="hero-heading">DESIGNER</h1>
-                        <h5 className='text-lg text-white'>CREATIVE THINKING AND PROBLEM SOLVING ARE WHERE MY MIND WANDERS, USING MY KNOWLEDGE AND PASSION FOR DESIGN AS MY MEDIUM</h5>
+        <div className="h-[200vh] relative hero-parent">
+            <div className='flex flex-col items-center h-[100vh] sticky top-10 gap-5'>
+                <div className="flex gap-5 items-center">
+                    <div className="w-[20%]">
+                        <h4 className="text-white text-xl uppercase font-mono">01//04 - scroll ↓</h4>
                     </div>
-                    {/* <div className="w-[100px] h-[100px] bg-lime-500 rounded-full box"></div> */}
+
+                    <div className='w-[80%] text-transparent text-[144px] leading-[10rem] font-bold'>
+                        <h1 className="hero-heading">MULTI-</h1>
+                        <h1 className="hero-heading">DISCIPLINARY</h1>
+                        <div className='flex gap-5'>
+                            <h1 className="hero-heading">DESIGNER</h1>
+                            <h5 className='text-lg text-white'>CREATIVE THINKING AND PROBLEM SOLVING ARE WHERE MY MIND WANDERS, USING MY KNOWLEDGE AND PASSION FOR DESIGN AS MY MEDIUM</h5>
+                        </div>
+                    </div>
                 </div>
+            <div className="w-[100px] h-[100px]  rounded-full box sticky bottom-10 flex justify-center items-center filter stroke-inherit backdrop-blur border border-white"><span className="text-5xl text-white">↓</span></div>
             </div>
         </div>
     );
