@@ -14,25 +14,20 @@ const Hero = () => {
             color: "white",
             scrollTrigger: {
                 trigger: ".hero-parent",
-                // markers: true,
+                markers: true,
+                // pin: ".hero-parent",
                 scrub: true,
                 start: "top 10%",
-                end: "bottom 90%"
+                end: "bottom 10%"
             }
         });
-        // var tl = gsap.timeline(),
-        //     mySplitText = new SplitText("h1", { type: "lines" }),
-        //     lines = mySplitText.lines; //an array of all the divs that wrap each character
-
-        // gsap.set("h1", { perspective: 400 });
-
-        // tl.from(lines, { duration: 1.5, opacity: 0, y: 60, rotationX: -90, transformOrigin: "0% 50% -50", ease: "power3.out", stagger: 0.15 }, "+=0");
+   
 
 
     }, []);
     return (
-        <div className="h-[200vh] relative hero-parent">
-            <div className='flex flex-col items-center h-[100vh] sticky top-10 gap-5'>
+        <div className="h-[200vh] relative hero-parent  pb-10">
+            <div className='flex flex-col items-center sticky top-20 gap-5'>
                 <div className="flex gap-5 items-center">
                     <div className="w-[20%]">
                         <h4 className="text-white text-xl uppercase font-mono">01//04 - scroll ↓</h4>
@@ -47,7 +42,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            <div className="w-[100px] h-[100px]  rounded-full box sticky bottom-10 flex justify-center items-center filter stroke-inherit backdrop-blur border border-white"><span className="text-5xl text-white">↓</span></div>
+            <div className="w-[100px] h-[100px] mt-10  rounded-full box sticky bottom-10 flex justify-center items-center filter stroke-inherit backdrop-blur border border-white"><span className="text-5xl text-white">↓</span></div>
             </div>
         </div>
     );

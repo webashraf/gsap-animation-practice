@@ -3,7 +3,7 @@ import './index.css'
 import Main from './Layout/Main.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <main className='max-w-screen-xl mx-auto bg-black'>
+  <main className='max-w-screen-2xl mx-auto bg-black'>
     <Main />
   </main>,
 )
